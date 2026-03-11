@@ -68,3 +68,31 @@
 [2026-03-11T05:37:37.565+0000] {logging_mixin.py:188} INFO - [2026-03-11T05:37:37.564+0000] {dag.py:3089} INFO - Sync 1 DAGs
 [2026-03-11T05:37:37.584+0000] {logging_mixin.py:188} INFO - [2026-03-11T05:37:37.583+0000] {dag.py:3947} INFO - Setting next_dagrun for run_glue_job_dag to None, run_after=None
 [2026-03-11T05:37:37.607+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/gule_dag.py took 0.112 seconds
+[2026-03-11T05:38:07.886+0000] {processor.py:161} INFO - Started process (PID=2516) to work on /opt/airflow/dags/gule_dag.py
+[2026-03-11T05:38:07.887+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/gule_dag.py for tasks to queue
+[2026-03-11T05:38:07.891+0000] {logging_mixin.py:188} INFO - [2026-03-11T05:38:07.890+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/gule_dag.py
+[2026-03-11T05:38:07.923+0000] {processor.py:840} INFO - DAG(s) 'run_glue_job_dag' retrieved from /opt/airflow/dags/gule_dag.py
+[2026-03-11T05:38:07.961+0000] {logging_mixin.py:188} INFO - [2026-03-11T05:38:07.961+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-11T05:38:07.984+0000] {logging_mixin.py:188} INFO - [2026-03-11T05:38:07.984+0000] {dag.py:3947} INFO - Setting next_dagrun for run_glue_job_dag to None, run_after=None
+[2026-03-11T05:38:08.015+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/gule_dag.py took 0.137 seconds
+[2026-03-11T05:38:38.154+0000] {processor.py:161} INFO - Started process (PID=2524) to work on /opt/airflow/dags/gule_dag.py
+[2026-03-11T05:38:38.155+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/gule_dag.py for tasks to queue
+[2026-03-11T05:38:38.157+0000] {logging_mixin.py:188} INFO - [2026-03-11T05:38:38.157+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/gule_dag.py
+[2026-03-11T05:38:38.180+0000] {processor.py:840} INFO - DAG(s) 'run_glue_job_dag' retrieved from /opt/airflow/dags/gule_dag.py
+[2026-03-11T05:38:38.204+0000] {logging_mixin.py:188} INFO - [2026-03-11T05:38:38.204+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-11T05:38:38.222+0000] {logging_mixin.py:188} INFO - [2026-03-11T05:38:38.222+0000] {dag.py:3947} INFO - Setting next_dagrun for run_glue_job_dag to None, run_after=None
+[2026-03-11T05:38:38.243+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/gule_dag.py took 0.097 seconds
+[2026-03-11T05:39:08.493+0000] {processor.py:161} INFO - Started process (PID=2532) to work on /opt/airflow/dags/gule_dag.py
+[2026-03-11T05:39:08.494+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/gule_dag.py for tasks to queue
+[2026-03-11T05:39:08.497+0000] {logging_mixin.py:188} INFO - [2026-03-11T05:39:08.497+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/gule_dag.py
+[2026-03-11T05:39:08.514+0000] {processor.py:840} INFO - DAG(s) 'run_glue_job_dag' retrieved from /opt/airflow/dags/gule_dag.py
+[2026-03-11T05:39:08.537+0000] {logging_mixin.py:188} INFO - [2026-03-11T05:39:08.537+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-11T05:39:08.551+0000] {logging_mixin.py:188} INFO - [2026-03-11T05:39:08.551+0000] {dag.py:3947} INFO - Setting next_dagrun for run_glue_job_dag to None, run_after=None
+[2026-03-11T05:39:08.570+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/gule_dag.py took 0.082 seconds
+[2026-03-11T05:39:38.839+0000] {processor.py:161} INFO - Started process (PID=2540) to work on /opt/airflow/dags/gule_dag.py
+[2026-03-11T05:39:38.841+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/gule_dag.py for tasks to queue
+[2026-03-11T05:39:38.842+0000] {logging_mixin.py:188} INFO - [2026-03-11T05:39:38.842+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/gule_dag.py
+[2026-03-11T05:39:38.857+0000] {processor.py:840} INFO - DAG(s) 'run_glue_job_dag' retrieved from /opt/airflow/dags/gule_dag.py
+[2026-03-11T05:39:38.880+0000] {logging_mixin.py:188} INFO - [2026-03-11T05:39:38.880+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-11T05:39:38.904+0000] {logging_mixin.py:188} INFO - [2026-03-11T05:39:38.903+0000] {dag.py:3947} INFO - Setting next_dagrun for run_glue_job_dag to None, run_after=None
+[2026-03-11T05:39:38.926+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/gule_dag.py took 0.092 seconds

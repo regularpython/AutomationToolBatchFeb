@@ -27,4 +27,4 @@ jobs:
 
       - name: Upload DAGs to S3
         run: |
-          aws s3 sync AutomationToolBatchFeb/dags s3://real-estate-dsr-2/dags/ --delete
+          aws s3 sync dags s3://real-estate-dsr-2/dags/ --delete
