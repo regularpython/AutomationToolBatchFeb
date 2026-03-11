@@ -1,0 +1,21 @@
+[2026-03-08T06:04:55.848+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-08T06:04:55.885+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: This_sample_dag.d manual__2026-03-08T06:04:19.798121+00:00 [queued]>
+[2026-03-08T06:04:55.897+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: This_sample_dag.d manual__2026-03-08T06:04:19.798121+00:00 [queued]>
+[2026-03-08T06:04:55.898+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-08T06:04:55.919+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): d> on 2026-03-08 06:04:19.798121+00:00
+[2026-03-08T06:04:55.929+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62: DeprecationWarning: This process (pid=283) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-08T06:04:55.931+0000] {standard_task_runner.py:64} INFO - Started process 284 to run task
+[2026-03-08T06:04:55.931+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'This_sample_dag', 'd', 'manual__2026-03-08T06:04:19.798121+00:00', '--job-id', '58', '--raw', '--subdir', 'DAGS_FOLDER/sample_dag.py', '--cfg-path', '/tmp/tmpw6umfmr8']
+[2026-03-08T06:04:55.932+0000] {standard_task_runner.py:91} INFO - Job 58: Subtask d
+[2026-03-08T06:04:55.994+0000] {task_command.py:426} INFO - Running <TaskInstance: This_sample_dag.d manual__2026-03-08T06:04:19.798121+00:00 [running]> on host 7029a760ead2
+[2026-03-08T06:04:56.133+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='This_sample_dag' AIRFLOW_CTX_TASK_ID='d' AIRFLOW_CTX_EXECUTION_DATE='2026-03-08T06:04:19.798121+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-08T06:04:19.798121+00:00'
+[2026-03-08T06:04:56.134+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-08T06:05:11.152+0000] {logging_mixin.py:188} INFO - Hello World from Apache Airflow!
+[2026-03-08T06:05:11.153+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-03-08T06:05:11.158+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-08T06:05:11.167+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=This_sample_dag, task_id=d, run_id=manual__2026-03-08T06:04:19.798121+00:00, execution_date=20260308T060419, start_date=20260308T060455, end_date=20260308T060511
+[2026-03-08T06:05:11.211+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2026-03-08T06:05:11.235+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-08T06:05:11.238+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

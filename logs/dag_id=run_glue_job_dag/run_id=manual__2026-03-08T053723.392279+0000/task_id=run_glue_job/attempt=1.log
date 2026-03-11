@@ -1,0 +1,81 @@
+[2026-03-08T05:37:28.548+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-08T05:37:28.578+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: run_glue_job_dag.run_glue_job manual__2026-03-08T05:37:23.392279+00:00 [queued]>
+[2026-03-08T05:37:28.599+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: run_glue_job_dag.run_glue_job manual__2026-03-08T05:37:23.392279+00:00 [queued]>
+[2026-03-08T05:37:28.600+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-08T05:37:28.627+0000] {taskinstance.py:2330} INFO - Executing <Task(GlueJobOperator): run_glue_job> on 2026-03-08 05:37:23.392279+00:00
+[2026-03-08T05:37:28.642+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62: DeprecationWarning: This process (pid=363) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-08T05:37:28.644+0000] {standard_task_runner.py:64} INFO - Started process 364 to run task
+[2026-03-08T05:37:28.645+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'run_glue_job_dag', 'run_glue_job', 'manual__2026-03-08T05:37:23.392279+00:00', '--job-id', '48', '--raw', '--subdir', 'DAGS_FOLDER/gule_dag.py', '--cfg-path', '/tmp/tmpgmbatc3c']
+[2026-03-08T05:37:28.649+0000] {standard_task_runner.py:91} INFO - Job 48: Subtask run_glue_job
+[2026-03-08T05:37:28.741+0000] {task_command.py:426} INFO - Running <TaskInstance: run_glue_job_dag.run_glue_job manual__2026-03-08T05:37:23.392279+00:00 [running]> on host d1b6ceff6796
+[2026-03-08T05:37:28.872+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='run_glue_job_dag' AIRFLOW_CTX_TASK_ID='run_glue_job' AIRFLOW_CTX_EXECUTION_DATE='2026-03-08T05:37:23.392279+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-08T05:37:23.392279+00:00'
+[2026-03-08T05:37:28.873+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-08T05:37:28.983+0000] {glue.py:186} INFO - Initializing AWS Glue Job: my-glue-job. Wait for completion: True
+[2026-03-08T05:37:28.986+0000] {glue.py:365} INFO - Checking if job already exists: my-glue-job
+[2026-03-08T05:37:29.015+0000] {base_aws.py:587} WARNING - Unable to find AWS Connection ID 'aws_default', switching to empty.
+[2026-03-08T05:37:29.017+0000] {base_aws.py:164} INFO - No connection ID provided. Fallback on boto3 credential strategy (region_name='us-east-1'). See: https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html
+[2026-03-08T05:37:31.229+0000] {glue.py:191} ERROR - Failed to run aws glue job, error: Unable to locate credentials
+[2026-03-08T05:37:31.231+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-08T05:37:31.235+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/amazon/aws/operators/glue.py", line 191, in execute
+    glue_job_run = self.glue_job_hook.initialize_job(self.script_args, self.run_job_kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/amazon/aws/hooks/glue.py", line 187, in initialize_job
+    job_name = self.get_or_create_glue_job()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/amazon/aws/hooks/glue.py", line 406, in get_or_create_glue_job
+    if self.has_job(self.job_name):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/amazon/aws/hooks/glue.py", line 368, in has_job
+    self.conn.get_job(JobName=job_name)
+  File "/home/airflow/.local/lib/python3.12/site-packages/botocore/client.py", line 565, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/botocore/client.py", line 1001, in _make_api_call
+    http, parsed_response = self._make_request(
+                            ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/botocore/client.py", line 1027, in _make_request
+    return self._endpoint.make_request(operation_model, request_dict)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/botocore/endpoint.py", line 119, in make_request
+    return self._send_request(request_dict, operation_model)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/botocore/endpoint.py", line 198, in _send_request
+    request = self.create_request(request_dict, operation_model)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/botocore/endpoint.py", line 134, in create_request
+    self._event_emitter.emit(
+  File "/home/airflow/.local/lib/python3.12/site-packages/botocore/hooks.py", line 412, in emit
+    return self._emitter.emit(aliased_event_name, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/botocore/hooks.py", line 256, in emit
+    return self._emit(event_name, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/botocore/hooks.py", line 239, in _emit
+    response = handler(**kwargs)
+               ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/botocore/signers.py", line 105, in handler
+    return self.sign(operation_name, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/botocore/signers.py", line 199, in sign
+    auth.add_auth(request)
+  File "/home/airflow/.local/lib/python3.12/site-packages/botocore/auth.py", line 418, in add_auth
+    raise NoCredentialsError()
+botocore.exceptions.NoCredentialsError: Unable to locate credentials
+[2026-03-08T05:37:31.269+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=run_glue_job_dag, task_id=run_glue_job, run_id=manual__2026-03-08T05:37:23.392279+00:00, execution_date=20260308T053723, start_date=20260308T053728, end_date=20260308T053731
+[2026-03-08T05:37:31.324+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 48 for task run_glue_job (Unable to locate credentials; 364)
+[2026-03-08T05:37:31.436+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2026-03-08T05:37:31.467+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-08T05:37:31.470+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

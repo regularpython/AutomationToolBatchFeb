@@ -1,0 +1,43 @@
+[2026-03-10T04:44:19.596+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-03-10T04:44:19.640+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: run_glue_job_dag.run_glue_job manual__2026-03-10T04:43:12.547165+00:00 [queued]>
+[2026-03-10T04:44:19.664+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: run_glue_job_dag.run_glue_job manual__2026-03-10T04:43:12.547165+00:00 [queued]>
+[2026-03-10T04:44:19.666+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-03-10T04:44:19.689+0000] {taskinstance.py:2330} INFO - Executing <Task(GlueJobOperator): run_glue_job> on 2026-03-10 04:43:12.547165+00:00
+[2026-03-10T04:44:19.706+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:62: DeprecationWarning: This process (pid=248) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-10T04:44:19.709+0000] {standard_task_runner.py:64} INFO - Started process 249 to run task
+[2026-03-10T04:44:19.708+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'run_glue_job_dag', 'run_glue_job', 'manual__2026-03-10T04:43:12.547165+00:00', '--job-id', '67', '--raw', '--subdir', 'DAGS_FOLDER/gule_dag.py', '--cfg-path', '/tmp/tmpj82ofeth']
+[2026-03-10T04:44:19.710+0000] {standard_task_runner.py:91} INFO - Job 67: Subtask run_glue_job
+[2026-03-10T04:44:19.785+0000] {task_command.py:426} INFO - Running <TaskInstance: run_glue_job_dag.run_glue_job manual__2026-03-10T04:43:12.547165+00:00 [running]> on host 463a7769dc2e
+[2026-03-10T04:44:19.950+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='run_glue_job_dag' AIRFLOW_CTX_TASK_ID='run_glue_job' AIRFLOW_CTX_EXECUTION_DATE='2026-03-10T04:43:12.547165+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-10T04:43:12.547165+00:00'
+[2026-03-10T04:44:19.951+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-03-10T04:44:19.973+0000] {glue.py:186} INFO - Initializing AWS Glue Job: gittest. Wait for completion: True
+[2026-03-10T04:44:19.975+0000] {glue.py:365} INFO - Checking if job already exists: gittest
+[2026-03-10T04:44:19.986+0000] {base_aws.py:587} WARNING - Unable to find AWS Connection ID 'aws_default', switching to empty.
+[2026-03-10T04:44:19.988+0000] {base_aws.py:164} INFO - No connection ID provided. Fallback on boto3 credential strategy (region_name='us-east-1'). See: https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html
+[2026-03-10T04:44:20.331+0000] {credentials.py:1147} INFO - Found credentials in environment variables.
+[2026-03-10T04:44:21.771+0000] {glue.py:207} INFO - You can monitor this Glue Job run at: https://console.aws.amazon.com/gluestudio/home?region=us-east-1#/job/gittest/run/jr_dc6b9bc783a9d3b99769791e2435b1a711dd0ba88bf1e5f08c8de1841f2e33d0
+[2026-03-10T04:44:22.096+0000] {glue.py:348} INFO - Polling for AWS Glue Job gittest current run state with status RUNNING
+[2026-03-10T04:44:28.414+0000] {glue.py:348} INFO - Polling for AWS Glue Job gittest current run state with status RUNNING
+[2026-03-10T04:44:34.740+0000] {glue.py:348} INFO - Polling for AWS Glue Job gittest current run state with status RUNNING
+[2026-03-10T04:44:41.169+0000] {glue.py:348} INFO - Polling for AWS Glue Job gittest current run state with status RUNNING
+[2026-03-10T04:44:47.498+0000] {glue.py:348} INFO - Polling for AWS Glue Job gittest current run state with status RUNNING
+[2026-03-10T04:44:53.810+0000] {glue.py:348} INFO - Polling for AWS Glue Job gittest current run state with status RUNNING
+[2026-03-10T04:45:00.155+0000] {glue.py:348} INFO - Polling for AWS Glue Job gittest current run state with status RUNNING
+[2026-03-10T04:45:06.467+0000] {glue.py:348} INFO - Polling for AWS Glue Job gittest current run state with status RUNNING
+[2026-03-10T04:45:12.800+0000] {glue.py:348} INFO - Polling for AWS Glue Job gittest current run state with status RUNNING
+[2026-03-10T04:45:19.122+0000] {glue.py:348} INFO - Polling for AWS Glue Job gittest current run state with status RUNNING
+[2026-03-10T04:45:25.434+0000] {glue.py:348} INFO - Polling for AWS Glue Job gittest current run state with status RUNNING
+[2026-03-10T04:45:31.757+0000] {glue.py:348} INFO - Polling for AWS Glue Job gittest current run state with status RUNNING
+[2026-03-10T04:45:38.093+0000] {glue.py:348} INFO - Polling for AWS Glue Job gittest current run state with status RUNNING
+[2026-03-10T04:45:44.423+0000] {glue.py:348} INFO - Polling for AWS Glue Job gittest current run state with status RUNNING
+[2026-03-10T04:45:50.748+0000] {glue.py:348} INFO - Polling for AWS Glue Job gittest current run state with status RUNNING
+[2026-03-10T04:45:57.088+0000] {glue.py:348} INFO - Polling for AWS Glue Job gittest current run state with status RUNNING
+[2026-03-10T04:46:03.410+0000] {glue.py:341} INFO - Exiting Job jr_dc6b9bc783a9d3b99769791e2435b1a711dd0ba88bf1e5f08c8de1841f2e33d0 Run State: SUCCEEDED
+[2026-03-10T04:46:03.411+0000] {glue.py:222} INFO - AWS Glue Job: gittest status: SUCCEEDED. Run Id: jr_dc6b9bc783a9d3b99769791e2435b1a711dd0ba88bf1e5f08c8de1841f2e33d0
+[2026-03-10T04:46:03.412+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-03-10T04:46:03.460+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=run_glue_job_dag, task_id=run_glue_job, run_id=manual__2026-03-10T04:43:12.547165+00:00, execution_date=20260310T044312, start_date=20260310T044419, end_date=20260310T044603
+[2026-03-10T04:46:03.511+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2026-03-10T04:46:03.532+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-10T04:46:03.534+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
