@@ -16,7 +16,6 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v3
         with:
@@ -24,7 +23,14 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
 
-
       - name: Upload DAGs to S3
         run: |
           aws s3 sync dags s3://real-estate-dsr-2/dags/ --delete
+
+      - name: Zip Plugins Folder
+        run: |
+          zip -r plugins.zip plugins
+
+      - name: Upload Plugins Zip to S3
+        run: |
+          aws s3 cp plugins.zip s3://real-estate-dsr-2/plugins.zip
