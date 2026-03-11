@@ -208,3 +208,31 @@
 [2026-03-11T05:47:05.164+0000] {logging_mixin.py:188} INFO - [2026-03-11T05:47:05.163+0000] {dag.py:3089} INFO - Sync 1 DAGs
 [2026-03-11T05:47:05.180+0000] {logging_mixin.py:188} INFO - [2026-03-11T05:47:05.179+0000] {dag.py:3947} INFO - Setting next_dagrun for This_sample_dag to None, run_after=None
 [2026-03-11T05:47:05.205+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sample_dag.py took 0.101 seconds
+[2026-03-11T05:47:35.468+0000] {processor.py:161} INFO - Started process (PID=2668) to work on /opt/airflow/dags/sample_dag.py
+[2026-03-11T05:47:35.468+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sample_dag.py for tasks to queue
+[2026-03-11T05:47:35.471+0000] {logging_mixin.py:188} INFO - [2026-03-11T05:47:35.471+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sample_dag.py
+[2026-03-11T05:47:35.495+0000] {processor.py:840} INFO - DAG(s) 'This_sample_dag' retrieved from /opt/airflow/dags/sample_dag.py
+[2026-03-11T05:47:35.523+0000] {logging_mixin.py:188} INFO - [2026-03-11T05:47:35.523+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-11T05:47:35.543+0000] {logging_mixin.py:188} INFO - [2026-03-11T05:47:35.543+0000] {dag.py:3947} INFO - Setting next_dagrun for This_sample_dag to None, run_after=None
+[2026-03-11T05:47:35.568+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sample_dag.py took 0.107 seconds
+[2026-03-11T05:48:05.860+0000] {processor.py:161} INFO - Started process (PID=2676) to work on /opt/airflow/dags/sample_dag.py
+[2026-03-11T05:48:05.861+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sample_dag.py for tasks to queue
+[2026-03-11T05:48:05.864+0000] {logging_mixin.py:188} INFO - [2026-03-11T05:48:05.863+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sample_dag.py
+[2026-03-11T05:48:05.898+0000] {processor.py:840} INFO - DAG(s) 'This_sample_dag' retrieved from /opt/airflow/dags/sample_dag.py
+[2026-03-11T05:48:05.937+0000] {logging_mixin.py:188} INFO - [2026-03-11T05:48:05.937+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-11T05:48:05.974+0000] {logging_mixin.py:188} INFO - [2026-03-11T05:48:05.973+0000] {dag.py:3947} INFO - Setting next_dagrun for This_sample_dag to None, run_after=None
+[2026-03-11T05:48:06.029+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sample_dag.py took 0.178 seconds
+[2026-03-11T05:48:36.128+0000] {processor.py:161} INFO - Started process (PID=2684) to work on /opt/airflow/dags/sample_dag.py
+[2026-03-11T05:48:36.129+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sample_dag.py for tasks to queue
+[2026-03-11T05:48:36.132+0000] {logging_mixin.py:188} INFO - [2026-03-11T05:48:36.132+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sample_dag.py
+[2026-03-11T05:48:36.161+0000] {processor.py:840} INFO - DAG(s) 'This_sample_dag' retrieved from /opt/airflow/dags/sample_dag.py
+[2026-03-11T05:48:36.194+0000] {logging_mixin.py:188} INFO - [2026-03-11T05:48:36.193+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-11T05:48:36.209+0000] {logging_mixin.py:188} INFO - [2026-03-11T05:48:36.209+0000] {dag.py:3947} INFO - Setting next_dagrun for This_sample_dag to None, run_after=None
+[2026-03-11T05:48:36.234+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sample_dag.py took 0.114 seconds
+[2026-03-11T05:49:06.480+0000] {processor.py:161} INFO - Started process (PID=2692) to work on /opt/airflow/dags/sample_dag.py
+[2026-03-11T05:49:06.482+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/sample_dag.py for tasks to queue
+[2026-03-11T05:49:06.484+0000] {logging_mixin.py:188} INFO - [2026-03-11T05:49:06.484+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/sample_dag.py
+[2026-03-11T05:49:06.511+0000] {processor.py:840} INFO - DAG(s) 'This_sample_dag' retrieved from /opt/airflow/dags/sample_dag.py
+[2026-03-11T05:49:06.551+0000] {logging_mixin.py:188} INFO - [2026-03-11T05:49:06.551+0000] {dag.py:3089} INFO - Sync 1 DAGs
+[2026-03-11T05:49:06.571+0000] {logging_mixin.py:188} INFO - [2026-03-11T05:49:06.570+0000] {dag.py:3947} INFO - Setting next_dagrun for This_sample_dag to None, run_after=None
+[2026-03-11T05:49:06.606+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/sample_dag.py took 0.135 seconds

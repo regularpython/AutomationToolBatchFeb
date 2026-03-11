@@ -36,4 +36,4 @@ jobs:
           aws s3 cp plugins.zip s3://real-estate-dsr-2/plugins.zip
       - name: Upload requirements
         run: |
-          aws s3 sync requirements.txt s3://real-estate-dsr-2/requirements.txt --delete
+          aws s3 sync requirements.txt s3://real-estate-dsr-2/requirements.txt
