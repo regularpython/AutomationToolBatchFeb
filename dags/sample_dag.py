@@ -12,11 +12,10 @@ def say_hello():
 
 # define DAG
 with DAG(
-    dag_id="This_sample_dag",
-    start_date=datetime(2024, 1, 1),
-    schedule_interval=None,   # run manually
-    catchup=False,
-    tags=["example"]
+    dag_id="sample_dag",
+    schedule="@daily",
+    start_date=datetime(2024,1,1),
+    catchup=False
 ) as dag:
 
     A = PythonOperator(
