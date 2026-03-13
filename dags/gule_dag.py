@@ -11,7 +11,7 @@ def test_task():
 
 
 with DAG(
-    dag_id="sample_dag",
+    dag_id="sample_dag2",
     schedule="@daily",
     start_date=datetime(2024,1,1),
     catchup=False
